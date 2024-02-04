@@ -57,6 +57,10 @@
     padding: 0 0 0 9px;
 }
 
+.signupContainer form input::placeholder {
+    color: #000;
+}
+
 .signupContainer form input:focus {
     border: 1px solid #2735ff;
 }
@@ -90,7 +94,7 @@
     padding: 10px 0;
     cursor: pointer;
     border-radius: 5px;
-    color: white;
+    /* color: white; */
 }
 
 .imgSelector {
