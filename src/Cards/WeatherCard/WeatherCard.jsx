@@ -4,7 +4,7 @@ import Loader from "../../Components/Loader/Loader";
 import { BsArrowDown, BsArrowUp, BsDropletHalf, BsSpeedometer2, BsThermometerHalf } from "react-icons/bs";
 import { FiWind } from "react-icons/fi";
 import { TbWorldLatitude, TbWorldLongitude } from "react-icons/tb";
-import tempInCelCius from "../../utils/Converter";
+// import tempInCelCius from "../../utils/Converter";
 
 const WeatherCard = ({ isLoading, data = {} }) => {
     const { main, wind, coord, name, sys } = data
@@ -27,7 +27,7 @@ const WeatherCard = ({ isLoading, data = {} }) => {
                         <div className="temp">
                             <div className="flex-container">
                                 <BsThermometerHalf className="thermoMeter"></BsThermometerHalf>
-                                <p className="celcius">{tempInCelCius(main ? main.temp : 273)}<sup>&#176;C</sup></p>
+                                <p className="celcius">{Math.ceil(((main ? main.temp : 273) - 273.15).toFixed(2))}<sup>&#176;C</sup></p>
                                 {/* <p className="fahrenheit">| {tempInFahrenheit(main ? main.temp : 273)} <sup>°F</sup></p> */}
                             </div>
                             <div className="hero-box">
