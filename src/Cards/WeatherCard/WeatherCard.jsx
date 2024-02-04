@@ -4,7 +4,7 @@ import Loader from "../../Components/Loader/Loader";
 import { BsArrowDown, BsArrowUp, BsDropletHalf, BsSpeedometer2, BsThermometerHalf } from "react-icons/bs";
 import { FiWind } from "react-icons/fi";
 import { TbWorldLatitude, TbWorldLongitude } from "react-icons/tb";
-import { tempInCelCius, tempInFahrenheit } from "../../utils/Converter";
+import tempInCelCius from "../../utils/Converter";
 
 const WeatherCard = ({ isLoading, data = {} }) => {
     const { main, wind, coord, name, sys } = data
