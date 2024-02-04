@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.hide {
+    display: none;
+}
+
+nav {
+    font-family: 'Acme', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 17px 37px;
+    width: 95vw;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+
+
+
+.nav_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.nav_links a:hover{
+    color: white;
+}
+
+
+.nav_links .active {
+    color: white;
+    position: relative;
+}
+
+.nav_links .active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #d4f9ff;
+    left: 0;
+    bottom: -5px;
+}
+
+
+.dynamic .login_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.dynamic .login_btn a {
+    transition: all 0.3s;
+    color: black;
+}
+.dynamic .login_btn a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+.dynamic .display_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dynamic .userBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: rgb(245, 245, 245);
+}
+
+.dynamic .userBox button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 7px;
+    color: black;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.dynamic .display_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 533px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .searchBox {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:959px) {
+    .searchBox {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width:1090px) {
+    .searchBox {
+        width: 40%;
+    }
+
+    .searchBox input {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1120px) {
+    nav {
+        gap: 20px;
+    }
+
+}
